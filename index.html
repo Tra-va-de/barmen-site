@@ -12,7 +12,7 @@
 <body>
     <nav class="nav">
         <div class="container">
-            <a class="nav__logo" href="">
+            <a class="nav__logo" href="/">
                 <svg class="nav__logo-img" xmlns="http://www.w3.org/2000/svg" width="169" height="38"
                     viewBox="0 0 169 38" fill="none">
                     <path
@@ -45,7 +45,12 @@
 
             <a class="nav__courses-btn btn" href="">
                 все курсы
-                <i class="btn__icon fa-solid fa-arrow-right"></i>
+                
+                <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" width="27" height="12"
+                    viewBox="0 0 27 12">
+                    <path
+                        d="M20.2628 12C20.9646 10.4615 23.07 7.69231 24.5437 6.46154L0 6.46153V5.53845L24.5437 5.53846C23.07 4.30769 20.9646 1.53846 20.2628 0H20.8154C22.7832 2.49573 24.8447 4.34188 27 5.53846V6.46154C24.8447 7.62393 22.7832 9.47009 20.8154 12H20.2628Z"></path>
+                </svg>
             </a>
 
             <ul class="nav__buttons">
@@ -54,16 +59,19 @@
                 <li class="nav__button"><a class="nav__link" href="">блог</a></li>
                 <li class="nav__button"><a class="nav__link" href="">магазин</a></li>
             </ul>
+
+            <button class="nav__close-btn" onclick="openCloseNav()"></button>
         </div>
     </nav>
 
+    <button class="open-nav-btn" onclick="openCloseNav()"><span class="open-nav-btn__icon"></span></button>
+    
     <header class="header">
         <div class="container">
             <section class="header__content">
                 <h1 class="header__title title">
                     <p class="title__row">
-                        <svg class="title__icon" xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 360 72">
+                        <svg class="title__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 72">
                             <path
                                 d="M315.641 72C320.208 62.7692 333.909 46.1538 343.5 38.7692L0 38.7692V33.2307L343.5 33.2308C333.909 25.8462 320.208 9.23077 315.641 0H319.236C332.043 14.9744 345.459 26.0513 359.485 33.2308V38.7692C345.459 45.7436 332.043 56.8205 319.236 72H315.641Z"
                                 fill="#E6FD59"></path>
@@ -81,6 +89,8 @@
             </section>
         </div>
     </header>
+
+    <script src="src/js/script.js"></script>
 </body>
 
 </html>
