@@ -25,9 +25,19 @@
 
     &--white {
         border-color: $text-color;
-
+        
         .btn__icon path {
             fill: $text-color;
+        }
+    }
+    
+    &--black {
+        color: $text-color;
+        background-color: $text-second-color;
+        border-color: $text-second-color;
+        
+        .btn__icon path {
+            fill: $text-second-color;
         }
     }
 }
