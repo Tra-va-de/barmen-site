@@ -1,0 +1,50 @@
+.open-nav-btn {
+    display: none;
+
+    background-color: $background-color;
+
+    position: fixed;
+    top: 20px;
+    right: 20px;
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    &__icon {
+        transform: translate(-50%, -50%);
+
+        &::before,
+        &::after {
+            content: '';
+        }
+
+        &,
+        &::before,
+        &::after {
+            display: block;
+            background-color: $text-color;
+
+            height: 2px;
+            width: 20px;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+
+        &::before {
+            transform: translate(-50%, -7px);
+        }
+
+        &::after {
+            transform: translate(-50%, 5px);
+        }
+
+    }
+
+    @media screen and (max-width: 768px) {
+        display: block;
+    }
+}
