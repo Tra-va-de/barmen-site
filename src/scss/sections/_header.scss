@@ -14,7 +14,8 @@
     }
 
     .title {
-        font-size: 52px;
+        font-size: adaptive-font-size($font-size-header, $font-size-header-mobile);
+
         font-weight: 100;
 
         display: flex;
@@ -34,7 +35,8 @@
         }
         
         &__icon {
-            width: 242 / 1920 * 100dvw;
+            width: 242 / strip-unit($container-width) * 100dvw;
+            max-width: 242px;
         }
     }
 
