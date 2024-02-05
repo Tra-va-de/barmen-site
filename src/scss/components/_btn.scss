@@ -9,23 +9,25 @@
 
     width: fit-content;
 
+    &__icon {
+        path {
+            fill: $accent-color;
+        }
+    }
+
     &--orange {
         border-color: $accent-second-color;
 
-        .btn__icon {
-            color: $accent-second-color;
+        .btn__icon path {
+            fill: $accent-second-color;
         }
     }
 
     &--white {
         border-color: $text-color;
 
-        .btn__icon {
-            color: $text-color;
+        .btn__icon path {
+            fill: $text-color;
         }
-    }
-    
-    &__icon {
-        color: $accent-color;
     }
 }
