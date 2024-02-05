@@ -1,5 +1,11 @@
 .nav {
+    position: fixed;
+    top: 0;
+    inset-inline: 0;
+
     padding-block: 16px;
+
+    background-color: $background-color;
 
     .container {
         display: flex;
