@@ -1,0 +1,45 @@
+.header {
+    width: 100%;
+    height: 100dvh;
+
+    .container {
+        display: flex;
+        align-items: center;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .title {
+        font-size: 52px;
+        font-weight: 100;
+
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        
+        
+        &__row {
+            text-align: justify;
+
+            width: 100%;
+            height: 60px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        &__icon {
+            width: 242 / 1920 * 100dvw;
+        }
+    }
+
+
+    &__btn {
+        padding: 8px 40px;
+    }
+}
