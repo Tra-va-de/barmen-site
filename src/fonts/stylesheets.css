@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'Megafont', Arial, sans-serif;
+    src: url('Kharkiv-Tone-100.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Megafont', Arial, sans-serif;
+    src: url('Kharkiv-Tone-200.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Megafont', Arial, sans-serif;
+    src: url('GraphikLCG-Regular-300') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Megafont', Arial, sans-serif;
+    src: url('GraphikLCG-Regular-400') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Megafont', Arial, sans-serif;
+    src: url('Graphik-LCG-Medium-500.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Megafont', Arial, sans-serif;
+    src: url('GraphikLCG-Bold-700') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
