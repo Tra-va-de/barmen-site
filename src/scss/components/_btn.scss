@@ -1,0 +1,21 @@
+.btn {
+    border-radius: 10px;
+    border: 1px solid $accent-color;
+    padding: 5px 11px;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    &--orange {
+        border-color: $accent-second-color;
+
+        .btn__icon {
+            color: $accent-second-color;
+        }
+    }
+    
+    &__icon {
+        color: $accent-color;
+    }
+}

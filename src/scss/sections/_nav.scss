@@ -1,0 +1,18 @@
+.nav {
+    padding-block: 16px;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        width: 119px;
+    }
+
+    &__buttons {
+        display: flex;
+        gap: $grid-gap;
+    }
+}
