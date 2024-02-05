@@ -5,6 +5,12 @@ body {
     font-size: $font-size-base;
 }
 
+h1 {
+    font-size: adaptive-font-size($font-size-header, $font-size-header-mobile);
+    
+    font-weight: 100;
+}
+
 .container {
     max-width: 1230px;
     padding-inline: 30px;
