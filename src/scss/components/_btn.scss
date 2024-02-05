@@ -7,11 +7,21 @@
     align-items: center;
     gap: 15px;
 
+    width: fit-content;
+
     &--orange {
         border-color: $accent-second-color;
 
         .btn__icon {
             color: $accent-second-color;
+        }
+    }
+
+    &--white {
+        border-color: $text-color;
+
+        .btn__icon {
+            color: $text-color;
         }
     }
     
