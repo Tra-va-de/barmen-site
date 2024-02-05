@@ -1,0 +1,51 @@
+.course-card {
+    background-color: $card-background-color;
+    border-radius: 24px;
+
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    gap: $grid-gap;
+
+    *:not(:last-child) {
+        color: $text-second-color;
+    }
+
+    &__title,
+    &__icons,
+    &__link {
+        align-self: center;
+    }
+
+    &__title {
+        font-size: $font-size-medium;
+        font-weight: 200;
+    }
+
+    &__icons {
+        display: flex;
+        gap: $grid-gap / 2;
+        
+        path {
+            fill: $text-color;
+            stroke: $text-second-color;
+        }
+    }
+
+    &__info {
+        border: 1px solid $text-second-color;
+        border-radius: 24px;
+        padding: 15px 15px;
+        background-color: $text-color;
+    }
+
+    .bold {
+        font-weight: 500;
+    }
+
+    &__link {
+        padding: 10px 40px;
+        margin-top: auto;
+    }
+}
