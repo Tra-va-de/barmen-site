@@ -1,0 +1,20 @@
+// Base
+@import "./base/reset";
+@import "./base/fonts";
+@import "./base/vars";
+@import "./base/base";
+
+// Components
+@import "./components/btn";
+@import "./components/course-card";
+
+// Blocks
+@import "./blocks/nav";
+@import "./blocks/header";
+@import "./blocks/courses";
+@import "./blocks/about";
+@import "./blocks/creators";
+@import "./blocks/works";
+@import "./blocks/blog";
+@import "./blocks/shop";
+@import "./blocks/footer";
