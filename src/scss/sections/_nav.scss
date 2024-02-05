@@ -6,11 +6,16 @@
     padding-block: 16px;
 
     background-color: $background-color;
+    white-space: nowrap;
 
     .container {
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+
+    &__courses-btn {
+        @extend %hover-scale;
     }
 
     &__logo {
@@ -20,5 +25,70 @@
     &__buttons {
         display: flex;
         gap: $grid-gap;
+    }
+
+    &__button {
+        transition: color 300ms ease-in-out;
+
+        &:hover {
+            color: $accent-color;
+        }
+    }
+
+    &__close-btn {
+        display: none;
+
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        
+        width: 40px;
+        height: 40px;
+
+        &::before, &::after {
+            content: '';
+
+            background-color: $text-color;
+
+            height: 2px;
+            width: 35px;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+        
+        &::before {
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+        
+        &::after {
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        display: none;
+
+        width: 100dvw;
+        height: 100dvh;
+        
+        .container {
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            gap: $grid-gap * 1.5;
+            
+            padding-inline-start: 180 / 768 * 100dvw;
+        }
+        
+        &__buttons {
+            flex-direction: column;
+            gap: $grid-gap * 1.5;
+        }
+
+        &__close-btn {
+            display: block;
+        }
     }
 }
