@@ -1,6 +1,6 @@
 // Screen size
-$max-screen-size: 1920;
-$min-screen-size: 280;
+$max-screen-width: 1920;
+$min-screen-width: 280;
 
 // Grid size
 $container-width: 1230px;
@@ -26,3 +26,11 @@ $font-size-base: 18px;
 $font-size-small: 14px;
 $font-size-medium: 24px;
 $font-size-big: 48px;
+$font-size-header: 52px;
+
+// Mobile font size
+// $font-size-base-mobile: 18px;
+// $font-size-small-mobile: 14px;
+// $font-size-medium-mobile: 24px;
+// $font-size-big-mobile: 48px;
+$font-size-header-mobile: 21px;
