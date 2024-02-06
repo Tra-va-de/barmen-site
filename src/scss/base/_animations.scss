@@ -32,3 +32,10 @@
         transform: translateX(-100%) translateY(-100%);
     }
 }
+
+// Анимация увеличения
+@keyframes scale-min {
+    to {
+        scale: 1.1;
+    }
+}

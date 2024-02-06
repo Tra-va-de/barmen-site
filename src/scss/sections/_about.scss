@@ -36,6 +36,8 @@
     &__arrow-icon {
         width: 122px;
 
+        animation: scale-min 2s ease-in-out 0s infinite alternate;
+
         path {
             stroke: $accent-second-color;
         }

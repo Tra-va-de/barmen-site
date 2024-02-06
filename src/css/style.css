@@ -203,6 +203,16 @@ h1 {
             transform: translateX(-100%) translateY(-100%);
   }
 }
+@-webkit-keyframes scale-min {
+  to {
+    scale: 1.1;
+  }
+}
+@keyframes scale-min {
+  to {
+    scale: 1.1;
+  }
+}
 .btn {
   border-radius: 10px;
   border: 1px solid #e6fd59;
@@ -573,6 +583,8 @@ h1 {
 }
 .about__arrow-icon {
   width: 122px;
+  -webkit-animation: scale-min 2s ease-in-out 0s infinite alternate;
+          animation: scale-min 2s ease-in-out 0s infinite alternate;
 }
 .about__arrow-icon path {
   stroke: #ff6b18;
