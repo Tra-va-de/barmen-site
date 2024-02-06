@@ -1,0 +1,53 @@
+.presentation {
+    
+    .container {
+        position: relative;
+
+        &::before {
+            content: '';
+
+            border: 1px solid $text-color;
+            border-radius: 32px;
+
+            position: absolute;
+            top: 0;
+            left: $grid-gap;
+            z-index: 2;
+
+            width: calc(100% - $grid-gap * 2);
+            height: 100%;
+
+            background-color: $background-color;
+
+            transform: translate($frames-step, $frames-step);
+        }
+    }
+
+    &__frame {
+        border: 1px solid $text-color;
+        border-radius: 32px;
+
+        position: relative;
+        z-index: 3;
+
+        overflow: hidden;
+
+        &.mobile {
+            .presentation__video--desktop {
+                display: none;
+            }
+
+            .presentation__video--mobile {
+                display: block;
+            }
+        }
+    }
+
+    &__video {
+        max-width: 100%;
+
+        &--mobile {
+            display: none;
+        }
+    }
+}

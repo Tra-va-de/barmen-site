@@ -1,6 +1,7 @@
 // Переменные, с которыми предстоит работа
 const nav = document.querySelector('.nav');
 const aboutDescription = document.querySelector('.about__description');
+const presentationFrame = document.querySelector('.presentation__frame');
 
 // Функция открытия / закрытия навигации на экранах
 // небольшого размера
@@ -29,3 +30,20 @@ const observer = new IntersectionObserver((entries) => {
 
 // Передали элемент для проверки
 observer.observe(aboutDescription);
+
+// для замены видео широкого формата
+// на мобильный
+const showMobilePresentation = () => {
+    if (window.innerWidth <= 480) {
+        presentationFrame.classList.add('mobile');
+    } else {
+        presentationFrame.classList.remove('mobile');
+    }
+}
+
+// Прослушка изменения размеров экрана
+// для применения описанной выше функции
+window.addEventListener('resize', showMobilePresentation);
+
+// Вызов функции при первичной инициализации
+showMobilePresentation();

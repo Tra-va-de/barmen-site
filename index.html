@@ -490,11 +490,14 @@
             </div>
         </section>
 
-        <sectiom class="presentation section-margin">
+        <section class="presentation section-margin">
             <div class="container">
-                <video src="" class="presentation__video" preload="auto" playsinline autoplay loop muted></video>
+                <div class="presentation__frame">
+                    <video src="src/video/presentation.mp4" class="presentation__video presentation__video--desktop" preload="auto" playsinline autoplay loop muted></video>
+                    <video src="src/video/presentation-mobile.mp4" class="presentation__video presentation__video--mobile hide" preload="auto" playsinline autoplay loop muted></video>
+                </div>
             </div>
-        </sectiom>
+        </section>
     </main>
 
     <script src="src/js/script.js"></script>
