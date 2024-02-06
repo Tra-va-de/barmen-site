@@ -1,8 +1,31 @@
 .about {
+    $frames-step: clamp(7px, 25 / 1920 * 100dvw, 25px);
 
     .container {
         display: flex;
-        align-items: end;
+        align-items: stretch;
+        gap: $grid-gap * 4;
+        
+        &>* {
+            
+            &:first-of-type {
+                max-width: 49%;
+                
+                @media screen and (max-width: 768px) {
+                    max-width: none;
+                }
+            }
+            
+            &:last-of-type {
+                flex-grow: 1;
+            }
+        }
+        
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            align-items: center;
+            gap: $grid-gap * 2;
+        }
     }
 
     &__info {
@@ -20,29 +43,27 @@
     }
 
     &__description {
-        $frames-step: clamp(7px, 25 / 1920 * 100dvw, 25px);
-
         position: relative;
-        
+
         &::before,
         &::after {
             content: '';
 
             border: 1px solid $text-color;
             border-radius: 32px;
-            
+
             position: absolute;
             top: 0;
             left: 0;
-            
+
             width: 100%;
             height: 100%;
-            
+
             background-color: $background-color;
 
-            transition: transform 300ms ease-in;
+            transition: transform 800ms ease-in-out;
         }
-        
+
         &::before {
             z-index: 2;
         }
@@ -51,19 +72,19 @@
             transform: translate($frames-step, $frames-step);
             z-index: 2;
         }
-        
+
         &.show::after {
             transform: translate(calc($frames-step * 2), calc($frames-step * 2));
         }
     }
-    
+
     &__frame {
         padding: clamp(25px, 50 / 1920 * 100dvw, 50px);
-        
+
         background-color: $background-color;
         border: 1px solid $text-color;
         border-radius: 32px;
-        
+
         display: flex;
         flex-direction: column;
         gap: $grid-gap;
@@ -83,5 +104,53 @@
 
     &__title {
         text-align: left;
+    }
+
+    .statistic {
+        position: relative;
+
+        display: flex;
+        justify-content: end;
+        align-items: end;
+
+        &__circles {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 274 / 477 * 100%;
+
+            path {
+                stroke: $accent-second-color;
+                fill: $background-color;
+            }
+        }
+
+        &__data {
+            position: relative;
+            z-index: 2;
+
+            display: grid;
+            grid-template-columns: max-content 50%;
+            grid-auto-rows: max-content;
+
+            row-gap: clamp(24px, 5vh, 60px);
+            column-gap: clamp(20px, 5vw, 45px);
+
+            align-items: center;
+            justify-content: end;
+        }
+
+        &__count {
+            font-size: adaptive-font-size(42px, 30px);
+            font-weight: 100;
+
+            background-color: $text-color;
+            color: $text-second-color;
+
+            border-radius: 10px;
+
+            padding: 7px 5px 0;
+        }
     }
 }
