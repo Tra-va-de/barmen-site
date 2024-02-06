@@ -36,3 +36,6 @@ $font-size-header: 52px;
 // $font-size-medium-mobile: 24px;
 $font-size-big-mobile: 20px;
 $font-size-header-mobile: 21px;
+
+// Frames
+$frames-step: clamp(7px, 25 / 1920 * 100dvw, 25px);
