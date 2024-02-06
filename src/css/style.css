@@ -151,6 +151,58 @@ h1 {
             transform: translate(0, 0);
   }
 }
+@-webkit-keyframes circles-movement {
+  0%, 100% {
+    top: 0;
+    left: 0;
+    -webkit-transform: translateX(0) translateY(0);
+            transform: translateX(0) translateY(0);
+  }
+  25% {
+    top: 0;
+    left: 100%;
+    -webkit-transform: translateX(-100%) translateY(0);
+            transform: translateX(-100%) translateY(0);
+  }
+  50% {
+    top: 100%;
+    left: 0;
+    -webkit-transform: translateX(0) translateY(-100%);
+            transform: translateX(0) translateY(-100%);
+  }
+  75% {
+    top: 100%;
+    left: 100%;
+    -webkit-transform: translateX(-100%) translateY(-100%);
+            transform: translateX(-100%) translateY(-100%);
+  }
+}
+@keyframes circles-movement {
+  0%, 100% {
+    top: 0;
+    left: 0;
+    -webkit-transform: translateX(0) translateY(0);
+            transform: translateX(0) translateY(0);
+  }
+  25% {
+    top: 0;
+    left: 100%;
+    -webkit-transform: translateX(-100%) translateY(0);
+            transform: translateX(-100%) translateY(0);
+  }
+  50% {
+    top: 100%;
+    left: 0;
+    -webkit-transform: translateX(0) translateY(-100%);
+            transform: translateX(0) translateY(-100%);
+  }
+  75% {
+    top: 100%;
+    left: 100%;
+    -webkit-transform: translateX(-100%) translateY(-100%);
+            transform: translateX(-100%) translateY(-100%);
+  }
+}
 .btn {
   border-radius: 10px;
   border: 1px solid #e6fd59;
@@ -603,6 +655,8 @@ h1 {
   top: 0;
   left: 0;
   width: 57.4423480084%;
+  -webkit-animation: circles-movement 12s ease-in-out 0s infinite;
+          animation: circles-movement 12s ease-in-out 0s infinite;
 }
 .about .statistic__circles path {
   stroke: #ff6b18;

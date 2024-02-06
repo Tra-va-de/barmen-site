@@ -124,6 +124,8 @@
 
             width: 274 / 477 * 100%;
 
+            animation: circles-movement 12s ease-in-out 0s infinite;
+
             path {
                 stroke: $accent-second-color;
                 fill: $background-color;
