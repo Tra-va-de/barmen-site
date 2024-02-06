@@ -103,6 +103,7 @@ body {
   color: #f8f4f4;
   font-family: "Megafont", Arial, sans-serif;
   font-size: 18px;
+  font-weight: 400;
 }
 
 h1 {
@@ -119,7 +120,7 @@ h1 {
 }
 
 .section-title {
-  font-size: 48px;
+  font-size: calc(20px + 28 * (100dvw - 280px) / (1920 - 280));
   font-weight: 200;
   text-transform: uppercase;
 }
@@ -419,6 +420,9 @@ h1 {
   padding: 8px 40px;
 }
 
+.courses {
+  min-height: 80dvh;
+}
 .courses .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -454,4 +458,83 @@ h1 {
     max-width: 400px;
     margin-inline: auto;
   }
+}
+
+.about .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+}
+.about__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 60px;
+}
+.about__arrow-icon {
+  width: 122px;
+}
+.about__description {
+  position: relative;
+}
+.about__description::before, .about__description::after {
+  content: "";
+  border: 1px solid #f8f4f4;
+  border-radius: 32px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #141414;
+  -webkit-transition: -webkit-transform 300ms ease-in;
+  transition: -webkit-transform 300ms ease-in;
+  transition: transform 300ms ease-in;
+  transition: transform 300ms ease-in, -webkit-transform 300ms ease-in;
+}
+.about__description::before {
+  z-index: 2;
+}
+.about__description.show::before {
+  -webkit-transform: translate(clamp(7px, 1.3020833333dvw, 25px), clamp(7px, 1.3020833333dvw, 25px));
+          transform: translate(clamp(7px, 1.3020833333dvw, 25px), clamp(7px, 1.3020833333dvw, 25px));
+  z-index: 2;
+}
+.about__description.show::after {
+  -webkit-transform: translate(calc(clamp(7px, 1.3020833333dvw, 25px) * 2), calc(clamp(7px, 1.3020833333dvw, 25px) * 2));
+          transform: translate(calc(clamp(7px, 1.3020833333dvw, 25px) * 2), calc(clamp(7px, 1.3020833333dvw, 25px) * 2));
+}
+.about__frame {
+  padding: clamp(25px, 2.6041666667dvw, 50px);
+  background-color: #141414;
+  border: 1px solid #f8f4f4;
+  border-radius: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+  z-index: 3;
+}
+.about__star-icon {
+  width: 51px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.about__title {
+  text-align: left;
 }
