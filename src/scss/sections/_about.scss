@@ -13,6 +13,10 @@
 
     &__arrow-icon {
         width: 122px;
+
+        path {
+            stroke: $accent-second-color;
+        }
     }
 
     &__description {

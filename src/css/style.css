@@ -481,6 +481,9 @@ h1 {
 .about__arrow-icon {
   width: 122px;
 }
+.about__arrow-icon path {
+  stroke: #ff6b18;
+}
 .about__description {
   position: relative;
 }
