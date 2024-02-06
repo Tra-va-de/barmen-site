@@ -13,6 +13,10 @@ h1 {
     font-weight: 100;
 }
 
+.section-margin {
+    margin-bottom: 200 / 1080 * 100dvh;
+}
+
 .container {
     max-width: 1230px;
     padding-inline: 30px;
