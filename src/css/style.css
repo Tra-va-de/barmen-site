@@ -139,14 +139,14 @@ h1 {
 }
 
 @-webkit-keyframes border-movement {
-  to {
+  70%, 100% {
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
   }
 }
 
 @keyframes border-movement {
-  to {
+  70%, 100% {
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
   }
@@ -611,8 +611,8 @@ h1 {
   z-index: 2;
 }
 .about__description.show::before, .about__description.show::after {
-  -webkit-animation: border-movement 1.8s ease-in-out 0s infinite alternate;
-          animation: border-movement 1.8s ease-in-out 0s infinite alternate;
+  -webkit-animation: border-movement 2.3s ease-in-out 0s infinite alternate;
+          animation: border-movement 2.3s ease-in-out 0s infinite alternate;
 }
 .about__description.show::before {
   -webkit-transform: translate(clamp(7px, 1.3020833333dvw, 25px), clamp(7px, 1.3020833333dvw, 25px));

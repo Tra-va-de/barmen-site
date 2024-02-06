@@ -1,6 +1,6 @@
 // Анимация обводки
 @keyframes border-movement {
-    to {
+    70%, 100% {
         transform: translate(0, 0);
     }
 }
