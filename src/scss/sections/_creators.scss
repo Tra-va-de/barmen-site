@@ -1,0 +1,110 @@
+.creators {
+    overflow: hidden;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        gap: 150 / 1920 * 100dvw;
+    }
+
+    &__arrow-icon {
+        width: 120 / 1920 * 100dvw;
+        aspect-ratio: 120 / 56;
+
+        path {
+            fill: $accent-color;
+        }
+
+        @media screen and (max-width: 425px) {
+            display: none;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+
+        row-gap: $grid-gap * 2;
+
+        margin-top: $grid-gap * 3;
+
+        position: relative;
+    }
+
+    .card {
+        display: flex;
+        align-items: center;
+        gap: $grid-gap;
+
+        width: set-grid-size(9, 12);
+
+        &__photo {
+            width: 394 / 1920 * 100dvw;
+
+            padding: 20px;
+
+            object-fit: cover;
+
+            @media screen and (max-width: 1024px) {
+                width: 75%;
+            }
+
+            @media screen and (max-width: 670px) {
+                width: 100%;
+            }
+        }
+
+        &__info {
+            display: flex;
+            flex-direction: column;
+            gap: $grid-gap;
+
+            flex-grow: 1;
+
+            @media screen and (max-width: 1024px) {
+                align-items: center;
+            }
+        }
+
+        &__name {
+            font-size: $font-size-medium;
+        }
+
+        &__description {
+            line-height: 22px;
+
+            @media screen and (max-width: 1024px) {
+                text-align: center;
+            }
+        }
+
+        @media screen and (max-width: 1024px) {
+            flex-direction: column;
+
+            width: 100%;
+        }
+    }
+
+    &__background {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        transform: translateX(50%);
+
+        z-index: -1;
+    }
+
+    &__background-img {
+        width: 676px;
+        aspect-ratio: 1;
+
+        path {
+            fill: $accent-color;
+        }
+
+        path.solid {
+            fill: $background-color;
+        }
+    }
+}
