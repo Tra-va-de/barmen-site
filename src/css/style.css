@@ -784,10 +784,20 @@ h1 {
   width: calc(0.75 * (100% + 30px) - 30px);
 }
 .creators .card__photo {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   width: 20.5208333333dvw;
   padding: 20px;
+  overflow: hidden;
+}
+.creators .card__photo-src {
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border: 2px solid white;
+  border-radius: 12.5%;
+  width: 100%;
 }
 @media screen and (max-width: 1024px) {
   .creators .card__photo {

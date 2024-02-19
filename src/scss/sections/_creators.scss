@@ -39,11 +39,23 @@
         width: set-grid-size(9, 12);
 
         &__photo {
+            flex-shrink: 0;
+
             width: 394 / 1920 * 100dvw;
 
             padding: 20px;
 
-            object-fit: cover;
+            overflow: hidden;
+
+            &-src {
+                object-fit: cover;
+                object-position: center;
+
+                border: 2px solid white;
+                border-radius: 12.5%;
+
+                width: 100%;
+            }
 
             @media screen and (max-width: 1024px) {
                 width: 75%;
