@@ -5,8 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barmen</title>
-    <link rel="stylesheet" href="src/css/style.min.css">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- SwiperJS -->
+    <link rel="stylesheet" href="./src/css/swiper-bundle.min.css">
+    <!-- My CSS -->
+    <link rel="stylesheet" href="./src/css/style.min.css">
 </head>
 
 <body>
@@ -93,7 +97,7 @@
     <main class="main">
         <section class="courses section-margin">
             <div class="container">
-                <h2 class="courses__title section-title">Курсы</h2>
+                <h2 class="courses__title section-title section-title--margin-bottom">Курсы</h2>
 
                 <ul class="courses__list">
                     <li class="courses__card course-card">
@@ -504,8 +508,8 @@
 
         <section class="creators section-margin">
             <div class="container">
-                <header class="creators__header">
-                    <h2 class="creators__title section-title">Основатели школы</h2>
+                <header class="creators__title section-title section-title--margin-bottom">
+                    <h2 class="creators__title-text">Основатели школы</h2>
                     <svg class="creators__arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 56"
                         fill="none">
                         <path
@@ -827,13 +831,96 @@
 
         <section class="works">
             <div class="container">
-                <h2 class="works__title section-title">Работы выпускников</h2>
+                <h2 class="works__title section-title section-title--margin-bottom">Работы выпускников</h2>
 
+                <div class="works__content">
+                    <!-- Свайпер -->
+                    <div class="works__swiper swiper">
+                        <!-- Обёртка слайдера -->
+                        <div class="swiper-wrapper">
+                            <!-- Слайды -->
+                            <div class="swiper-slide">
+                                <article class="card">
+                                    <img class="card__cocktail-photo" src="./src/img/works/cocktail1.png" alt="">
+
+                                    <div class="card__info">
+                                        <header class="card__header">
+                                            <img class="card__person-photo" src="./src/img/works/person1.png" alt="">
+
+                                            <div class="card__person-info">
+                                                <h3 class="card__person-name section-title">АНТОН КАРПАЧ</h3>
+
+                                                <p class="card__person-description">Бар-менеджер лаундж-бара ДУТЬ, Уфа
+                                                </p>
+                                            </div>
+                                        </header>
+
+                                        <p class="card__text">
+                                            Очень важно встретить наставников, которые покажут вектор движения, дадут
+                                            праведный подзатыльник и похвалят. <a class="card__link"
+                                                href="https://www.instagram.com/solution.school.ru/">@solution.school.ru</a>
+                                            в лицах <a class="card__link"
+                                                href="https://www.instagram.com/david_stenshin/">@david_stenshin</a>
+                                            и <a class="card__link"
+                                                href="https://www.instagram.com/shashin.evgeniy/">@shashin.evgeniy</a>,
+                                            Спасибо за знания, которыми вы делитесь.
+                                        </p>
+
+                                        <div class="card__btns">
+                                            <div class="card__social">
+
+                                                <a class="social-btn" href="#!">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38 38"
+                                                        fill="none">
+                                                        <path
+                                                            d="M28.0773 8.9182C27.7023 8.87867 27.2946 8.93688 26.885 9.09783C26.3772 9.29635 18.4207 12.6232 11.0038 15.7266L8.55312 16.7518C7.60414 17.1343 7.125 17.7563 7.125 18.5941C7.125 19.1807 7.37476 19.9764 8.56634 20.4452L12.703 22.0925C13.0607 23.1592 13.8915 25.6358 14.1003 26.2941C14.2244 26.6845 14.5379 27.6677 15.3301 27.8977C15.4925 27.9526 15.6621 27.9809 15.8347 27.9809C16.3346 27.9809 16.6945 27.7497 16.8706 27.6151L19.4998 25.4048L22.6932 28.3402C22.8162 28.4647 23.4672 29.0937 24.3417 29.0937C25.4329 29.0937 26.2606 28.1909 26.4332 27.3172C26.5269 26.8382 29.6068 11.4702 29.6068 11.4725C29.8833 10.2398 29.3862 9.60039 29.0669 9.32785C28.7932 9.09512 28.4524 8.95774 28.0773 8.9182ZM27.3302 11.341C26.9048 13.4608 24.5858 25.0316 24.2337 26.6994L19.5659 22.408L16.3989 25.074L17.2761 21.6632C17.2761 21.6632 23.3271 15.575 23.6916 15.2206C23.985 14.9368 24.0464 14.8374 24.0464 14.7387C24.0464 14.6074 23.9785 14.513 23.8216 14.513C23.6806 14.513 23.489 14.6474 23.3875 14.7102C22.0973 15.5097 16.6037 18.6206 13.8997 20.1495L9.97682 18.5919L11.881 17.7968C16.7319 15.7667 25.3713 12.1508 27.3302 11.341Z"
+                                                            fill="#141414"></path>
+                                                    </svg>
+                                                </a>
+
+                                            </div>
+
+                                            <a class="btn btn--orange btn--wide works__read-btn" href="#!">читать</a>
+                                        </div>
+
+                                        <a class="level-btn btn btn--blue btn--wide" href="#!">Курс «Алгоритм»</a>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">Slide 2</div>
+                            <div class="swiper-slide">Slide 3</div>
+                        </div>
+
+                        <!-- Кнопки слайдера -->
+                        <div class="swiper__btns">
+                            <button class="btn btn--orange works__btn-left">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 12" fill="none">
+                                    <path
+                                        d="M6.73715 1.77143e-06C6.03536 1.53846 3.93 4.30769 2.45625 5.53846L27 5.53847L27 6.46155L2.45625 6.46154C3.93 7.69231 6.03537 10.4615 6.73715 12L6.18465 12C4.21681 9.50427 2.15525 7.65812 -4.84188e-07 6.46154L-5.64886e-07 5.53846C2.15525 4.37607 4.21681 2.52992 6.18465 1.81974e-06L6.73715 1.77143e-06Z"
+                                        fill="#FF6B18"></path>
+                                </svg>
+                            </button>
+
+                            <a class="btn btn--orange btn--wide works__btn-all-cources" href="#!">все работы</a>
+
+                            <button class="btn btn--orange works__btn-right">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 12" fill="none">
+                                    <path
+                                        d="M20.2628 12C20.9646 10.4615 23.07 7.69231 24.5437 6.46154L0 6.46153V5.53845L24.5437 5.53846C23.07 4.30769 20.9646 1.53846 20.2628 0H20.8154C22.7832 2.49573 24.8447 4.34188 27 5.53846V6.46154C24.8447 7.62393 22.7832 9.47008 20.8154 12H20.2628Z"
+                                        fill="#FF6B18"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
-    <script src="src/js/script.js"></script>
+    <!-- SwiperJS -->
+    <script src="./src/js/swiper-bundle.min.js"></script>
+    <!-- My JS -->
+    <script src="./src/js/script.js"></script>
 </body>
 
 </html>

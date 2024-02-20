@@ -1,0 +1,175 @@
+.works {
+
+    .card {
+        display: flex;
+        gap: $grid-gap;
+
+        border: 1px solid #f8f4f4;
+        border-radius: 32px;
+        padding: $grid-gap;
+
+        position: relative;
+
+        @media screen and (max-width: 870px) {
+            flex-direction: column;
+        }
+
+        @media screen and (max-width: 425px) {
+            padding: $grid-gap * 0.67;
+        }
+
+        .level-btn {
+            position: absolute;
+            top: $grid-gap;
+            right: $grid-gap;
+
+            @media screen and (max-width: 370px) {
+                width: calc(100% - $grid-gap * 2);
+
+                padding-inline: 0;
+                text-align: center;
+
+                display: block;
+            }
+        }
+
+        &__cocktail-photo {
+            flex-shrink: 0;
+
+            object-fit: contain;
+
+            height: 100%;
+
+            aspect-ratio: 329 / 260;
+
+            @media screen and (max-width: 1200px) {
+                margin-top: $grid-gap * 2;
+            }
+
+            @media screen and (max-width: 870px) {
+                margin-top: $grid-gap * 2;
+            }
+
+            @media screen and (max-width: 650px) {
+                order: 2;
+                margin-top: 0;
+            }
+        }
+
+        &__info {
+            display: flex;
+            flex-direction: column;
+            gap: $grid-gap;
+        }
+
+        &__header {
+            display: flex;
+            align-items: center;
+            gap: $grid-gap;
+
+            @media screen and (max-width: 1200px) {
+                margin-top: $grid-gap * 2;
+            }
+
+            @media screen and (max-width: 870px) {
+                margin-top: 0;
+            }
+
+            @media screen and (max-width: 650px) {
+                margin-top: $grid-gap * 2;
+                align-items: center;
+            }
+
+            @media screen and (max-width: 320px) {
+                gap: $grid-gap * 0.5;
+            }
+        }
+
+        &__person-photo {
+            border: 1px solid #f8f4f4;
+            border-radius: 50%;
+
+            @media screen and (max-width: 425px) {
+                width: 70px;
+            }
+        }
+
+        &__person-info {
+            display: flex;
+            flex-direction: column;
+            gap: $grid-gap / 2;
+        }
+
+        &__person-name {
+            font-size: 20px;
+            text-align: left;
+        }
+
+        &__person-description {
+            font-size: $font-size-base;
+        }
+
+        &__link {
+            color: $accent-color;
+        }
+
+        &__social {
+            display: flex;
+            align-items: center;
+            gap: $grid-gap;
+        }
+
+        &__btns {
+            display: flex;
+            align-items: center;
+            gap: $grid-gap * 2;
+
+            @media screen and (max-width: 425px) {
+                flex-wrap: wrap;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: $grid-gap / 2;
+            }
+        }
+
+    }
+
+    .swiper__btns {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: $grid-gap;
+
+
+        margin-top: 50px;
+
+        &>* {
+            display: block;
+            height: 100%;
+        }
+
+        svg {
+            width: 27px;
+            height: 12px;
+
+            path {
+                fill: $accent-second-color;
+            }
+        }
+
+        @media screen and (max-width: 380px) {
+            flex-wrap: wrap;
+            gap: $grid-gap / 2;
+
+            * {
+                width: calc(50% - $grid-gap / 2);
+                flex-grow: 1;
+            }
+
+            .works__btn-all-cources {
+                order: 2;
+                text-align: center;
+            }
+        }
+    }
+}

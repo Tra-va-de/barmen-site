@@ -1,0 +1,18 @@
+.social-btn {
+    display: block;
+
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+    background-color: #cac7c7;
+
+    svg {
+        width: 100%;
+        height: 100%;
+
+        path {
+            fill: $text-second-color;
+        }
+    }
+}

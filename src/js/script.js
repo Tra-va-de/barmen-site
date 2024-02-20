@@ -47,3 +47,14 @@ window.addEventListener('resize', showMobilePresentation);
 
 // Вызов функции при первичной инициализации
 showMobilePresentation();
+
+const swiper = new Swiper('.works__swiper', {
+    direction: 'horizontal',
+    loop: true,
+
+    // Кнопки
+    navigation: {
+        nextEl: '.works__btn-right',
+        prevEl: '.works__btn-left',
+    },
+});
