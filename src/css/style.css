@@ -303,6 +303,7 @@ h1 {
   position: fixed;
   top: 20px;
   right: 20px;
+  z-index: 999;
   width: 45px;
   height: 45px;
   border-radius: 50%;

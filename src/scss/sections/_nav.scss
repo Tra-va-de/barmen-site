@@ -44,11 +44,12 @@
         position: absolute;
         top: 20px;
         right: 20px;
-        
+
         width: 40px;
         height: 40px;
 
-        &::before, &::after {
+        &::before,
+        &::after {
             content: '';
 
             background-color: $text-color;
@@ -60,25 +61,23 @@
             top: 50%;
             left: 50%;
         }
-        
+
         &::before {
             transform: translate(-50%, -50%) rotate(45deg);
         }
-        
+
         &::after {
             transform: translate(-50%, -50%) rotate(-45deg);
         }
 
     }
-    
-    @media screen and (max-width: 768px) {
-        // display: none;
 
+    @media screen and (max-width: 768px) {
         transform: translateX(100%);
-        
+
         width: 100dvw;
         height: 100dvh;
-        
+
         &.show {
             transform: translateX(0);
         }
@@ -88,10 +87,10 @@
             justify-content: center;
             align-items: start;
             gap: $grid-gap * 1.5;
-            
+
             padding-inline-start: 180 / 768 * 100dvw;
         }
-        
+
         &__buttons {
             flex-direction: column;
             gap: $grid-gap * 1.5;
