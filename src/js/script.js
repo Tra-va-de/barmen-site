@@ -52,6 +52,9 @@ const swiper = new Swiper('.works__swiper', {
     direction: 'horizontal',
     loop: true,
 
+    autoplay: true,
+    delay: 3000,
+
     // Кнопки
     navigation: {
         nextEl: '.works__btn-right',

@@ -7,12 +7,24 @@
     border-radius: 50%;
     background-color: #cac7c7;
 
+    overflow: hidden;
+
     svg {
         width: 100%;
         height: 100%;
 
         path {
             fill: $text-second-color;
+        }
+    }
+
+    &--reverse {
+        background-color: $text-second-color;
+
+        svg {
+            path {
+                fill: #cac7c7;
+            }
         }
     }
 }
