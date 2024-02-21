@@ -52,8 +52,12 @@ const swiper = new Swiper('.works__swiper', {
     direction: 'horizontal',
     loop: true,
 
-    autoplay: true,
-    delay: 3000,
+    // автослайдинг
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+    },
 
     // Кнопки
     navigation: {
