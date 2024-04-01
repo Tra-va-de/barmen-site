@@ -1,4 +1,5 @@
 // Переменные, с которыми предстоит работа
+const loader = document.querySelector('#loader');
 const nav = document.querySelector('.nav');
 const aboutDescription = document.querySelector('.about__description');
 const presentationFrame = document.querySelector('.presentation__frame');
@@ -64,4 +65,13 @@ const swiper = new Swiper('.works__swiper', {
         nextEl: '.works__btn-right',
         prevEl: '.works__btn-left',
     },
+});
+
+
+// Активируем loader
+window.addEventListener('load', () => {
+    loader.classList.add('loader--hide');
+    setTimeout(() => {
+        loader.remove();
+    }, 300);
 });

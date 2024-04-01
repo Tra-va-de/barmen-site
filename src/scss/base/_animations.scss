@@ -1,19 +1,22 @@
 // Анимация обводки
 @keyframes border-movement {
-    70%, 100% {
+
+    70%,
+    100% {
         transform: translate(0, 0);
     }
 }
 
 // Анимация кругов
 @keyframes circles-movement {
+
     0%,
     100% {
         top: 0;
         left: 0;
         transform: translateX(0) translateY(0);
     }
-    
+
     25% {
         top: 0;
         left: 100%;
@@ -37,5 +40,12 @@
 @keyframes scale-min {
     to {
         scale: 1.1;
+    }
+}
+
+// Анимация loader
+@keyframes loader {
+    to {
+        rotate: 360deg;
     }
 }

@@ -216,6 +216,50 @@ h1 {
     scale: 1.1;
   }
 }
+@-webkit-keyframes loader {
+  to {
+    rotate: 360deg;
+  }
+}
+@keyframes loader {
+  to {
+    rotate: 360deg;
+  }
+}
+.loader {
+  width: 100dvw;
+  height: 100dvh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #141414;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+.loader--hide {
+  opacity: 0;
+  pointer-events: none;
+}
+.loader__circle {
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+  border: 10px solid rgba(231, 253, 88, 0.2509803922);
+  border-top-color: #e6fd59;
+  -webkit-animation: loader 1s infinite linear;
+          animation: loader 1s infinite linear;
+}
+
 .btn {
   border-radius: 10px;
   border: 1px solid #e6fd59;
