@@ -7,18 +7,27 @@ $container-width: 1230px;
 $grid-gap: 30px;
 
 // Colors
-$text-color: #f8f4f4;
-$text-second-color: #141414;
+$white: #f8f4f4;
+$black: #141414;
+$gray: #6f6f6fa2;
 
-$background-color: #141414;
+$yellow: #e6fd59;
+$orange: #ff6b18;
+$pink: #efe9e9;
 
-$accent-color: #e6fd59;
-$accent-second-color: #ff6b18;
+$text-color: $white;
+$text-second-color: $black;
 
-$button-color: #141414;
-$button-second-color: #f8f4f4;
+$background-color: $black;
+$background-second-color: $white;
 
-$card-background-color: #efe9e9;
+$accent-color: $yellow;
+$accent-second-color: $orange;
+
+$button-color: $black;
+$button-second-color: $white;
+
+$card-background-color: $pink;
 
 // Fonts
 $font-main: 'Megafont', Arial, sans-serif;

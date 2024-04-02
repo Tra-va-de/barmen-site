@@ -43,6 +43,13 @@
     }
 }
 
+// Анимация уменьшения
+@keyframes scale-max {
+    to {
+        scale: 0.9;
+    }
+}
+
 // Анимация loader
 @keyframes loader {
     to {
