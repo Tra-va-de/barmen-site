@@ -1,6 +1,7 @@
 .shop {
     background-color: $background-second-color;
     position: relative;
+    overflow: hidden;
 
     .container {
         position: relative;
@@ -184,7 +185,7 @@
         &--right {
             right: calc((100dvw - $container-width) / -2 + 10px);
             top: 0;
-            transform: translateY(-45%);
+            transform: translateY(-40%);
 
             @media screen and (max-width: $container-width) {
                 right: 10px;

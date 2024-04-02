@@ -1344,6 +1344,7 @@ main > section {
 .shop {
   background-color: #f8f4f4;
   position: relative;
+  overflow: hidden;
 }
 .shop .container {
   position: relative;
@@ -1518,8 +1519,8 @@ main > section {
 .shop__star--right {
   right: calc((100dvw - 1230px) / -2 + 10px);
   top: 0;
-  -webkit-transform: translateY(-45%);
-          transform: translateY(-45%);
+  -webkit-transform: translateY(-40%);
+          transform: translateY(-40%);
 }
 @media screen and (max-width: 1230px) {
   .shop__star--right {
