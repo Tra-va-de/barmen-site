@@ -1,4 +1,10 @@
 .blog {
+    overflow-x: hidden;
+
+    .container {
+        position: relative;
+    }
+
     &__cards {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -49,6 +55,57 @@
             line-height: 1.38rem;
 
             margin-top: 8px;
+        }
+
+    }
+
+    &__btn-all-articles {
+        margin: $grid-gap * 3 auto 0;
+    }
+
+
+    .decorations {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+
+        display: flex;
+        justify-content: space-between;
+
+        &__star {
+            width: 92px;
+            height: 92px;
+
+            align-self: flex-end;
+
+            position: relative;
+            transform: translate(-60%, -50%);
+        }
+
+        &__big-star {
+            width: 230px;
+            height: 231px;
+
+            position: relative;
+            top: 2%;
+            transform: translate(60%, -5%);
+        }
+
+        &__star,
+        &__big-star {
+            animation: scale-min 3s ease-in-out infinite alternate;
+
+            @media screen and (max-width: 960px) {
+                transform: translateX(0) translateY(0);
+            }
+
+            path {
+                stroke: $accent-color;
+                fill: $background-color;
+            }
         }
     }
 }
