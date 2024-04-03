@@ -21,10 +21,12 @@
         </div>
     </div>
 
-    <nav class="nav">
+    <button class="open-nav-btn" onclick="openCloseNav()"><span class="open-nav-btn__icon"></span></button>
+
+    <header class="header">
         <div class="container">
-            <a class="nav__logo" href="/">
-                <svg class="nav__logo-img" xmlns="http://www.w3.org/2000/svg" width="169" height="38"
+            <a class="header__logo" href="/">
+                <svg class="header__logo-img" xmlns="http://www.w3.org/2000/svg" width="169" height="38"
                     viewBox="0 0 169 38" fill="none">
                     <path
                         d="M56.6223 31C50.4365 31 47.2291 28.4134 47 23.2403H53.092C53.1962 24.2143 53.4773 24.9177 53.9355 25.3506C54.4771 25.9567 55.3726 26.2597 56.6223 26.2597C57.5387 26.2597 58.2468 26.0541 58.7467 25.6429C59.2466 25.2316 59.4965 24.6688 59.4965 23.9545C59.4965 23.2835 59.2466 22.7749 58.7467 22.4286C58.3301 22.1905 57.4033 21.9524 55.9662 21.7143C52.8005 21.3247 50.6136 20.5779 49.4056 19.474C48.1559 18.3918 47.5311 16.671 47.5311 14.3117C47.5311 12.1905 48.3017 10.4589 49.8429 9.11688C51.4258 7.75324 53.5398 7.07143 56.1849 7.07143C61.6625 7.07143 64.5992 9.48485 64.9949 14.3117H59.0591C58.83 12.645 57.8719 11.8117 56.1849 11.8117C55.331 11.8117 54.6853 11.9957 54.248 12.3636C53.8106 12.71 53.5919 13.1861 53.5919 13.7922C53.5919 14.4416 53.8314 14.9286 54.3104 15.2532C54.8103 15.6429 55.7267 15.9134 57.0597 16.0649C60.0588 16.4329 62.1936 17.0823 63.4641 18.013C64.9012 19.1818 65.6198 20.9351 65.6198 23.2727C65.6198 25.4805 64.8387 27.2987 63.2767 28.7273C61.6105 30.2424 59.3923 31 56.6223 31Z"
@@ -54,7 +56,7 @@
                 </svg>
             </a>
 
-            <a class="nav__courses-btn btn" href="">
+            <a class="header__courses-btn btn" href="#!">
                 все курсы
 
                 <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" width="27" height="12" viewBox="0 0 27 12">
@@ -64,44 +66,42 @@
                 </svg>
             </a>
 
-            <ul class="nav__buttons">
-                <li class="nav__button"><a class="nav__link" href="">о школе</a></li>
-                <li class="nav__button"><a class="nav__link" href="">отзывы</a></li>
-                <li class="nav__button"><a class="nav__link" href="">блог</a></li>
-                <li class="nav__button"><a class="nav__link" href="">магазин</a></li>
-            </ul>
+            <nav class="nav">
+                <a class="nav__button" href="">о школе</a>
+                <a class="nav__button" href="">отзывы</a>
+                <a class="nav__button" href="">блог</a>
+                <a class="nav__button" href="">магазин</a>
+            </nav>
 
-            <button class="nav__close-btn" onclick="openCloseNav()"></button>
-        </div>
-    </nav>
-
-    <button class="open-nav-btn" onclick="openCloseNav()"><span class="open-nav-btn__icon"></span></button>
-
-    <header class="header">
-        <div class="container">
-            <section class="header__content">
-                <h1 class="header__title title">
-                    <p class="title__row">
-                        <svg class="title__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 72">
-                            <path
-                                d="M315.641 72C320.208 62.7692 333.909 46.1538 343.5 38.7692L0 38.7692V33.2307L343.5 33.2308C333.909 25.8462 320.208 9.23077 315.641 0H319.236C332.043 14.9744 345.459 26.0513 359.485 33.2308V38.7692C345.459 45.7436 332.043 56.8205 319.236 72H315.641Z"
-                                fill="#E6FD59"></path>
-                        </svg>
-
-                        ПЕРВАЯ
-                    </p>
-
-                    <p class="title__row">ОНЛАЙН-ШКОЛА</p>
-
-                    <p class="title__row">ДЛЯ БАРМЕНОВ</p>
-                </h1>
-
-                <a class="header__btn btn btn--white" href="">запись на курсы</a>
-            </section>
+            <button class="header__close-btn" onclick="openCloseNav()"></button>
         </div>
     </header>
 
     <main class="main">
+        <section class="welcome">
+            <div class="container">
+                <section class="welcome__content">
+                    <h1 class="welcome__title title">
+                        <p class="title__row">
+                            <svg class="title__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 72">
+                                <path
+                                    d="M315.641 72C320.208 62.7692 333.909 46.1538 343.5 38.7692L0 38.7692V33.2307L343.5 33.2308C333.909 25.8462 320.208 9.23077 315.641 0H319.236C332.043 14.9744 345.459 26.0513 359.485 33.2308V38.7692C345.459 45.7436 332.043 56.8205 319.236 72H315.641Z"
+                                    fill="#E6FD59"></path>
+                            </svg>
+
+                            ПЕРВАЯ
+                        </p>
+
+                        <p class="title__row">ОНЛАЙН-ШКОЛА</p>
+
+                        <p class="title__row">ДЛЯ БАРМЕНОВ</p>
+                    </h1>
+
+                    <a class="welcome__btn btn btn--white" href="">запись на курсы</a>
+                </section>
+            </div>
+        </section>
+
         <section class="courses">
             <div class="container">
                 <h2 class="courses__title section-title section-title--margin-bottom">Курсы</h2>
