@@ -14,12 +14,12 @@
         height: 100%;
 
         path {
-            fill: $text-second-color;
+            fill: $black;
         }
     }
 
     &--reverse {
-        background-color: $text-second-color;
+        background-color: $black;
 
         svg {
             path {

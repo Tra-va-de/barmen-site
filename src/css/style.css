@@ -111,7 +111,8 @@ h1 {
   font-weight: 100;
 }
 
-main > section {
+main > section,
+footer {
   padding-block: 9.2592592593dvh;
 }
 
@@ -1527,4 +1528,89 @@ main > section {
   .shop__star--right {
     right: 10px;
   }
+}
+
+.mailing {
+  position: relative;
+  overflow: hidden;
+}
+.mailing .container {
+  position: relative;
+  z-index: 2;
+}
+.mailing__form, .mailing__input {
+  border: 1px solid #f8f4f4;
+}
+.mailing__form {
+  padding: 30px;
+  border-radius: 30px;
+  background-color: #141414;
+  max-width: 750px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media screen and (max-width: 480px) {
+  .mailing__form {
+    padding: 15px;
+    gap: 15px;
+  }
+}
+.mailing__form > * {
+  width: 46%;
+}
+@media screen and (max-width: 640px) {
+  .mailing__form > * {
+    width: 100%;
+  }
+}
+.mailing__input, .mailing__btn {
+  padding: 15px;
+  border-radius: 15px;
+}
+@media screen and (max-width: 480px) {
+  .mailing__input, .mailing__btn {
+    font-size: 12px !important;
+    padding: 10px 15px;
+  }
+}
+.mailing__btn {
+  color: #e6fd59;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 20px;
+}
+.mailing__consent-text {
+  font-size: 14px;
+  max-width: 600px;
+  margin-top: 45px;
+}
+@media screen and (max-width: 480px) {
+  .mailing__consent-text {
+    font-size: 12px !important;
+  }
+}
+.mailing__consent-link {
+  color: #e6fd59 !important;
+}
+.mailing .decoration {
+  position: absolute;
+  top: 0;
+  right: -5.2083333333dvw;
+}
+.mailing .decoration svg {
+  width: 27.0833333333dvw;
+  min-width: 300px;
+  aspect-ratio: 608/562;
+}
+.mailing .decoration svg path {
+  stroke: #e6fd59;
 }

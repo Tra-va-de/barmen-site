@@ -16,54 +16,54 @@
     }
 
     &--orange {
-        border-color: $accent-second-color;
+        border-color: $orange;
 
         .btn__icon path {
-            fill: $accent-second-color;
+            fill: $orange;
         }
     }
 
     &--white {
-        border-color: $text-color;
+        border-color: $white;
 
         .btn__icon path {
-            fill: $text-color;
+            fill: $white;
         }
     }
 
     &--white-reverse {
-        border-color: $background-color;
-        background-color: $text-color;
+        border-color: $black;
+        background-color: $white;
         color: $text-second-color !important;
 
         .btn__icon path {
-            fill: $background-color;
+            fill: $black;
         }
     }
 
     &--black {
         color: $text-color;
-        background-color: $text-second-color;
-        border-color: $text-second-color;
+        background-color: $black;
+        border-color: $black;
 
         .btn__icon path {
-            fill: $text-second-color;
+            fill: $black;
         }
     }
 
     &--blue {
-        border-color: #5270a6;
+        border-color: $blue;
 
         .btn__icon path {
-            fill: #5270a6;
+            fill: $blue;
         }
     }
 
     &--purple {
-        border-color: #6a538e;
+        border-color: $purple;
 
         .btn__icon path {
-            fill: #6a538e;
+            fill: $purple;
         }
     }
 
