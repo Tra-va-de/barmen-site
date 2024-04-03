@@ -1,5 +1,6 @@
 // Переменные, с которыми предстоит работа
 const loader = document.querySelector('#loader');
+const loaderVideo = loader.getElementsByTagName('video')[0];
 const nav = document.querySelector('.nav');
 const aboutDescription = document.querySelector('.about__description');
 const presentationFrame = document.querySelector('.presentation__frame');
@@ -75,3 +76,9 @@ window.addEventListener('load', () => {
         loader.remove();
     }, 300);
 });
+
+
+// Включаем звук при клике на видео
+loaderVideo.addEventListener('click', () => {
+    loaderVideo.muted = false;
+})

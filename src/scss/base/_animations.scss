@@ -53,6 +53,6 @@
 // Анимация loader
 @keyframes loader {
     to {
-        rotate: 360deg;
+        rotate: -360deg;
     }
 }

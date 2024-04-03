@@ -30,5 +30,7 @@
         border-top-color: $loader-color-second;
 
         animation: loader $loader-duration infinite linear;
+
+        overflow: hidden;
     }
 }

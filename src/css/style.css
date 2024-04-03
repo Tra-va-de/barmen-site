@@ -228,12 +228,12 @@ main > section {
 }
 @-webkit-keyframes loader {
   to {
-    rotate: 360deg;
+    rotate: -360deg;
   }
 }
 @keyframes loader {
   to {
-    rotate: 360deg;
+    rotate: -360deg;
   }
 }
 .loader {
@@ -266,8 +266,9 @@ main > section {
   border-radius: 50%;
   border: 10px solid rgba(231, 253, 88, 0.2509803922);
   border-top-color: #e6fd59;
-  -webkit-animation: loader 1s infinite linear;
-          animation: loader 1s infinite linear;
+  -webkit-animation: loader 5s infinite linear;
+          animation: loader 5s infinite linear;
+  overflow: hidden;
 }
 
 .btn {
