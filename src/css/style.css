@@ -271,6 +271,18 @@ footer {
           animation: loader 5s infinite linear;
   overflow: hidden;
 }
+.loader__video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 1;
+  -webkit-transition: opacity 1s ease;
+  transition: opacity 1s ease;
+}
+.loader__video--hide {
+  opacity: 0;
+}
 
 .btn {
   border-radius: 10px;

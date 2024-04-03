@@ -1,6 +1,6 @@
 // Переменные, с которыми предстоит работа
 const loader = document.querySelector('#loader');
-const loaderVideo = loader.getElementsByTagName('video')[0];
+const loaderVideo = loader.querySelector('.loader__video');
 const nav = document.querySelector('.nav');
 const aboutDescription = document.querySelector('.about__description');
 const presentationFrame = document.querySelector('.presentation__frame');
@@ -77,6 +77,11 @@ window.addEventListener('load', () => {
     }, 300);
 });
 
+
+// Отображаем видео при прогрузке
+loaderVideo.addEventListener('canplaythrough', () => {
+    loaderVideo.classList.remove('loader__video--hide');
+})
 
 // Включаем звук при клике на видео
 loaderVideo.addEventListener('click', () => {
