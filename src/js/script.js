@@ -79,7 +79,7 @@ window.addEventListener('load', () => {
 
 
 // Отображаем видео при прогрузке
-loaderVideo.addEventListener('canplaythrough', () => {
+loaderVideo.addEventListener('canplay', () => {
     loaderVideo.classList.remove('loader__video--hide');
 })
 

@@ -1791,9 +1791,6 @@ main > section {
     font-size: 16px;
   }
 }
-.footer__link--hide {
-  display: none;
-}
 .footer__site-link, .footer__info-text {
   font-size: 14px;
 }
