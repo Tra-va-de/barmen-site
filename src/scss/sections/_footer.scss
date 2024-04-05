@@ -1,0 +1,259 @@
+.footer {
+    padding-bottom: 50px;
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+            'logo courses shop'
+            'socials buttons shop'
+            'school buttons shop'
+            'email buttons shop'
+            'info to-up-btn shop';
+
+        row-gap: $grid-gap;
+
+        position: relative;
+
+        @media screen and (max-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+
+            grid-template-areas:
+                'logo courses'
+                'socials buttons'
+                'school buttons'
+                'email shop'
+                'info shop'
+                'info to-up-btn';
+        }
+
+        @media screen and (max-width: 630px) {
+            row-gap: $grid-gap / 2;
+
+            grid-template-areas:
+                'courses to-up-btn'
+                'logo socials'
+                'school email'
+                'buttons info'
+                'buttons info'
+                'shop .';
+        }
+
+        @media screen and (max-width: 480px) {
+            grid-template-columns: 1fr;
+
+            grid-template-areas:
+                'logo'
+                'socials'
+                'school'
+                'courses'
+                'buttons'
+                'shop'
+                'email'
+                'info';
+        }
+
+        @media screen and (max-width: 330px) {
+            grid-template-areas:
+                'logo'
+                'socials'
+                'school'
+                'courses'
+                'buttons'
+                'shop'
+                'email'
+                'info'
+                'to-up-btn';
+        }
+    }
+
+    &__cell {
+        &:nth-of-type(1) {
+            grid-area: logo;
+        }
+
+        &:nth-of-type(2) {
+            grid-area: courses;
+        }
+
+        &:nth-of-type(3) {
+            grid-area: shop;
+
+            @media screen and (max-width: 768px) {
+                margin-top: $grid-gap * -1 * 3;
+            }
+
+            @media screen and (max-width: 630px) {
+                margin-top: 0;
+            }
+        }
+
+        &:nth-of-type(4) {
+            grid-area: school;
+
+            @media screen and (max-width: 630px) {
+                font-size: 16px;
+                margin: auto 0;
+            }
+        }
+
+        &:nth-of-type(5) {
+            grid-area: buttons;
+
+            @media screen and (min-width: 631px) {
+                margin-top: -20px;
+            }
+        }
+
+        &:nth-of-type(6) {
+            grid-area: info;
+
+            @media screen and (max-width: 630px) {
+                // margin-top: calc($grid-gap * -1 - 10px);
+            }
+        }
+
+        &:nth-of-type(7) {
+            grid-area: to-up-btn;
+            align-self: end;
+
+            @media screen and (max-width: 630px) {
+                align-self: center;
+            }
+
+            @media screen and (min-width: 331px) and (max-width: 480px) {
+                position: absolute;
+                top: $grid-gap / 3;
+                right: $grid-gap;
+            }
+        }
+
+        &:nth-of-type(8) {
+            grid-area: socials;
+        }
+
+        &:nth-of-type(9) {
+            grid-area: email;
+
+            @media screen and (min-width: 631px) {
+                margin-top: -10px;
+            }
+
+            @media screen and (min-width: 631px) and (max-width: 768px) {
+                padding-block: 20px;
+            }
+
+            @media screen and (max-width: 630px) {
+                margin: auto 0;
+            }
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        &--school-info {
+            gap: $grid-gap;
+
+            @media screen and (max-width: 630px) {
+                flex-direction: row;
+            }
+        }
+
+        &--school-email {
+            gap: 40px;
+        }
+    }
+
+    &__socials {
+        display: flex;
+        gap: $grid-gap;
+    }
+
+    &__social-link,
+    &__courses-btn {
+        @extend %hover-scale;
+    }
+
+    &__social-icon {
+
+        &--tg,
+        &--vk {
+            path {
+                fill: $black;
+            }
+
+            rect {
+                fill: $white;
+            }
+        }
+
+        &--yt {
+            path {
+                fill: $white;
+            }
+        }
+    }
+
+    &__link {
+        color: $text-color;
+        font-weight: 400;
+
+        transition: color 0.2s ease-in-out;
+
+        &:hover {
+            color: $accent-color;
+        }
+
+        @media screen and (max-width: 768px) {
+            font-size: 16px;
+        }
+
+        &--hide {
+            display: none;
+
+            // @media screen and (max-width: 768px) {
+            //     display: block;
+            // }
+        }
+    }
+
+    &__site-link,
+    &__info-text {
+        font-size: $font-size-small;
+    }
+
+    &__courses-btn {
+        margin-left: -10px;
+    }
+
+    &__line-wrapper {
+        display: flex;
+        align-items: center;
+        gap: $grid-gap;
+    }
+
+    &__start-link {
+        display: flex;
+        gap: 10px;
+
+        color: $accent-color !important;
+
+        &--main {
+            @media screen and (max-width: 768px) and (min-width: 631px) {
+                display: none;
+            }
+        }
+
+        &--mobile {
+
+            @media screen and (max-width: 630px),
+            (min-width: 769px) {
+                display: none;
+            }
+        }
+    }
+}

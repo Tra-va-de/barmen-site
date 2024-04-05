@@ -1,9 +1,9 @@
 @import '../fonts/Megafont/stylesheets.css';
-.header__courses-btn {
+.footer__social-link, .footer__courses-btn, .header__courses-btn {
   -webkit-transition: scale 300ms ease-in-out;
   transition: scale 300ms ease-in-out;
 }
-.header__courses-btn:hover {
+.footer__social-link:hover, .footer__courses-btn:hover, .header__courses-btn:hover {
   scale: 1.1;
 }
 
@@ -111,8 +111,7 @@ h1 {
   font-weight: 100;
 }
 
-main > section,
-footer {
+main > section {
   padding-block: 9.2592592593dvh;
 }
 
@@ -1626,4 +1625,204 @@ footer {
 }
 .mailing .decoration svg path {
   stroke: #e6fd59;
+}
+
+.footer {
+  padding-bottom: 50px;
+}
+.footer .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: "logo courses shop" "socials buttons shop" "school buttons shop" "email buttons shop" "info to-up-btn shop";
+  row-gap: 30px;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .footer .container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "logo courses" "socials buttons" "school buttons" "email shop" "info shop" "info to-up-btn";
+  }
+}
+@media screen and (max-width: 630px) {
+  .footer .container {
+    row-gap: 15px;
+    grid-template-areas: "courses to-up-btn" "logo socials" "school email" "buttons info" "buttons info" "shop .";
+  }
+}
+@media screen and (max-width: 480px) {
+  .footer .container {
+    grid-template-columns: 1fr;
+    grid-template-areas: "logo" "socials" "school" "courses" "buttons" "shop" "email" "info";
+  }
+}
+@media screen and (max-width: 330px) {
+  .footer .container {
+    grid-template-areas: "logo" "socials" "school" "courses" "buttons" "shop" "email" "info" "to-up-btn";
+  }
+}
+.footer__cell:nth-of-type(1) {
+  grid-area: logo;
+}
+.footer__cell:nth-of-type(2) {
+  grid-area: courses;
+}
+.footer__cell:nth-of-type(3) {
+  grid-area: shop;
+}
+@media screen and (max-width: 768px) {
+  .footer__cell:nth-of-type(3) {
+    margin-top: -90px;
+  }
+}
+@media screen and (max-width: 630px) {
+  .footer__cell:nth-of-type(3) {
+    margin-top: 0;
+  }
+}
+.footer__cell:nth-of-type(4) {
+  grid-area: school;
+}
+@media screen and (max-width: 630px) {
+  .footer__cell:nth-of-type(4) {
+    font-size: 16px;
+    margin: auto 0;
+  }
+}
+.footer__cell:nth-of-type(5) {
+  grid-area: buttons;
+}
+@media screen and (min-width: 631px) {
+  .footer__cell:nth-of-type(5) {
+    margin-top: -20px;
+  }
+}
+.footer__cell:nth-of-type(6) {
+  grid-area: info;
+}
+.footer__cell:nth-of-type(7) {
+  grid-area: to-up-btn;
+  align-self: end;
+}
+@media screen and (max-width: 630px) {
+  .footer__cell:nth-of-type(7) {
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+}
+@media screen and (min-width: 331px) and (max-width: 480px) {
+  .footer__cell:nth-of-type(7) {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+  }
+}
+.footer__cell:nth-of-type(8) {
+  grid-area: socials;
+}
+.footer__cell:nth-of-type(9) {
+  grid-area: email;
+}
+@media screen and (min-width: 631px) {
+  .footer__cell:nth-of-type(9) {
+    margin-top: -10px;
+  }
+}
+@media screen and (min-width: 631px) and (max-width: 768px) {
+  .footer__cell:nth-of-type(9) {
+    padding-block: 20px;
+  }
+}
+@media screen and (max-width: 630px) {
+  .footer__cell:nth-of-type(9) {
+    margin: auto 0;
+  }
+}
+.footer__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+.footer__item--school-info {
+  gap: 30px;
+}
+@media screen and (max-width: 630px) {
+  .footer__item--school-info {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+.footer__item--school-email {
+  gap: 40px;
+}
+.footer__socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+}
+.footer__social-icon--tg path, .footer__social-icon--vk path {
+  fill: #141414;
+}
+.footer__social-icon--tg rect, .footer__social-icon--vk rect {
+  fill: #f8f4f4;
+}
+.footer__social-icon--yt path {
+  fill: #f8f4f4;
+}
+.footer__link {
+  color: #f8f4f4;
+  font-weight: 400;
+  -webkit-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+}
+.footer__link:hover {
+  color: #e6fd59;
+}
+@media screen and (max-width: 768px) {
+  .footer__link {
+    font-size: 16px;
+  }
+}
+.footer__link--hide {
+  display: none;
+}
+.footer__site-link, .footer__info-text {
+  font-size: 14px;
+}
+.footer__courses-btn {
+  margin-left: -10px;
+}
+.footer__line-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+}
+.footer__start-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  color: #e6fd59 !important;
+}
+@media screen and (max-width: 768px) and (min-width: 631px) {
+  .footer__start-link--main {
+    display: none;
+  }
+}
+@media screen and (max-width: 630px), (min-width: 769px) {
+  .footer__start-link--mobile {
+    display: none;
+  }
 }
