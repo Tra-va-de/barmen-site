@@ -70,6 +70,7 @@
                 path {
                     animation-name: welcome-figure-motion;
                     animation-timing-function: ease-in-out;
+                    animation-fill-mode: both;
 
                     @for $i from 1 through 17 {
                         &:nth-child(#{$i}) {
@@ -86,9 +87,7 @@
 
             path {
                 stroke: $accent-color;
-                scale: .6;
-
-                transition: transform 0.5s ease-in-out;
+                transform: scale(.6);
             }
         }
     }

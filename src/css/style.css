@@ -692,6 +692,8 @@ main > section {
           animation-name: welcome-figure-motion;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 .welcome .decorations .decorations__welcome-figure.play path:nth-child(1) {
   -webkit-animation-duration: 2.9s;
@@ -803,11 +805,8 @@ main > section {
 }
 .welcome .decorations .decorations__welcome-figure path {
   stroke: #e6fd59;
-  scale: 0.6;
-  -webkit-transition: -webkit-transform 0.5s ease-in-out;
-  transition: -webkit-transform 0.5s ease-in-out;
-  transition: transform 0.5s ease-in-out;
-  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  -webkit-transform: scale(0.6);
+          transform: scale(0.6);
 }
 
 .courses .container {
