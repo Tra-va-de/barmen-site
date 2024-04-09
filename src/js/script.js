@@ -2,6 +2,7 @@
 const loader = document.querySelector('#loader');
 const loaderVideo = loader.querySelector('.loader__video');
 const nav = document.querySelector('.nav');
+const welcomeFigure = document.querySelector('.decorations__welcome-figure');
 const aboutDescription = document.querySelector('.about__description');
 const presentationFrame = document.querySelector('.presentation__frame');
 
@@ -17,6 +18,27 @@ window.addEventListener('resize', () => {
     if (window.innerWidth > 768 && nav.classList.contains('show')) {
         nav.classList.remove('show');
     }
+});
+
+// Функция для запуска анимации фигуры в welcome
+const welcomeFigureAnimation = () => {
+    welcomeFigure.classList.remove('play');
+    void welcomeFigure.offsetWidth; // Это нужно для перезапуска анимации
+    welcomeFigure.classList.add('play');
+}
+
+// Запуск анимации welcome при наведении курсора
+welcomeFigure.addEventListener('mouseover', function () {
+    welcomeFigureAnimation();
+});
+
+welcomeFigure.addEventListener('mouseleave', function () {
+    welcomeFigure.classList.remove('play');
+});
+
+// Активируем анимацию при загрузке страницы
+window.addEventListener('load', () => {
+    welcomeFigureAnimation();
 });
 
 // Создали обсервер для проверки появления элемента
