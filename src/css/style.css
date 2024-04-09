@@ -674,7 +674,6 @@ main > section {
   right: 0;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  z-index: -1;
 }
 @media screen and (max-width: 768px) {
   .welcome .decorations {
