@@ -629,6 +629,8 @@ main > section {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 50px;
+  position: relative;
+  z-index: 2;
 }
 .welcome .title {
   display: -webkit-box;
