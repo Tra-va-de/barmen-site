@@ -39,7 +39,6 @@
         }
     }
 
-
     &__close-btn {
         display: none;
 
@@ -93,7 +92,7 @@
             padding-inline-start: 180 / 768 * 100dvw;
         }
 
-        &__buttons {
+        .nav {
             flex-direction: column;
             gap: $grid-gap * 1.5;
         }

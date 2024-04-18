@@ -1,7 +1,7 @@
 // Переменные, с которыми предстоит работа
 const loader = document.querySelector('#loader');
 const loaderVideo = loader.querySelector('.loader__video');
-const nav = document.querySelector('.nav');
+const nav = document.querySelector('.header');
 const welcomeFigure = document.querySelector('.decorations__welcome-figure');
 const aboutDescription = document.querySelector('.about__description');
 const presentationFrame = document.querySelector('.presentation__frame');
