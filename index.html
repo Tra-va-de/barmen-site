@@ -17,8 +17,10 @@
 <body>
     <div class="loader" id="loader">
         <div class="loader__circle">
-            <video class="loader__video loader__video--hide" src="./src/video/pedro.mp4" autoplay muted loop
-                preload="auto"></video>
+            <video class="loader__video loader__video--hide" autoplay muted loop preload="auto">
+                <source src="./src/video/pedro.mp4" type="video/mp4">
+                <track src="./src/video/pedro.vtt" kind="captions" srcLang="en" label="English Captions">
+            </video>
         </div>
     </div>
 
