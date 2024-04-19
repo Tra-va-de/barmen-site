@@ -3,6 +3,7 @@
   src: url("./Kharkiv-Tone-100.woff") format("woff");
   font-weight: 100;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -10,6 +11,7 @@
   src: url("./Kharkiv-Tone-200.woff") format("woff");
   font-weight: 200;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -17,6 +19,7 @@
   src: url("./GraphikLCG-Regular.woff") format("woff");
   font-weight: 300;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -24,6 +27,7 @@
   src: url("./Graphik-LCG-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -31,6 +35,7 @@
   src: url("./Graphik-LCG-Medium-500.woff") format("woff");
   font-weight: 500;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -38,4 +43,5 @@
   src: url("./GraphikLCG-Bold-700.woff") format("woff");
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
 }
