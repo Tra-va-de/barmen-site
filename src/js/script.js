@@ -4,7 +4,10 @@ const loaderVideo = loader.querySelector('.loader__video');
 const nav = document.querySelector('.header');
 const welcomeFigure = document.querySelector('.decorations__welcome-figure');
 const aboutDescription = document.querySelector('.about__description');
-const presentationFrame = document.querySelector('.presentation__frame');
+const presentationVideo = document.querySelector('.presentation__video');
+const presentationVideoDesktopSouce = './src/video/presentation.mp4';
+const presentationVideoMobileSouce = './src/video/presentation-mobile.mp4';
+let presentationVideoState = 'mobile';
 
 // Функция открытия / закрытия навигации на экранах
 // небольшого размера
@@ -58,10 +61,12 @@ observer.observe(aboutDescription);
 // для замены видео широкого формата
 // на мобильный
 const showMobilePresentation = () => {
-    if (window.innerWidth <= 480) {
-        presentationFrame.classList.add('mobile');
-    } else {
-        presentationFrame.classList.remove('mobile');
+    if (window.innerWidth <= 480 && presentationVideoState === 'desktop') {
+        presentationVideo.src = presentationVideoMobileSouce;
+        presentationVideoState = 'mobile';
+    } else if (window.innerWidth > 480 && presentationVideoState === 'mobile') {
+        presentationVideo.src = presentationVideoDesktopSouce;
+        presentationVideoState = 'desktop';
     }
 }
 

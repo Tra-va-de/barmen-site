@@ -1037,17 +1037,8 @@ main > section {
   z-index: 3;
   overflow: hidden;
 }
-.presentation__frame.mobile .presentation__video--desktop {
-  display: none;
-}
-.presentation__frame.mobile .presentation__video--mobile {
-  display: block;
-}
 .presentation__video {
   max-width: 100%;
-}
-.presentation__video--mobile {
-  display: none;
 }
 
 .creators {

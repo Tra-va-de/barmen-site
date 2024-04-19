@@ -582,16 +582,15 @@
         <section class="presentation">
             <div class="container">
                 <div class="presentation__frame">
-                    <video src="./src/video/presentation.mp4" class="presentation__video presentation__video--desktop"
-                        preload="auto" playsinline autoplay loop muted></video>
-                    <video src="./src/video/presentation-mobile.mp4"
-                        class="presentation__video presentation__video--mobile hide" preload="auto" playsinline autoplay
-                        loop muted></video>
+                    <video class="presentation__video" preload="auto" playsinline autoplay loop muted>
+                        <source src=" ./src/video/presentation-mobile.mp4" type="video/mp4">
+                        Ваш браузер не поддерживает HTML5 видео.
+                    </video>
                 </div>
             </div>
         </section>
 
-        <section class="creators">
+        <section class=" creators">
             <div class="container">
                 <header class="creators__title section-title section-title--margin-bottom">
                     <h2 class="creators__title-text">Основатели школы</h2>
@@ -612,7 +611,8 @@
                         <div class="card__info">
                             <h3 class="card__name section-title">ЕВГЕНИЙ ШАШИН</h3>
                             <p class="card__description">
-                                Шеф-бармен сети White Rabbit Family Group, а&nbsp;также в баре Коробок, Krasota
+                                Шеф-бармен сети White Rabbit Family Group, а&nbsp;также в баре Коробок,
+                                Krasota
                                 gastrotheater, White Rabbit Restaurant & Bar
                             </p>
                             <a class="card__btn btn" href="">

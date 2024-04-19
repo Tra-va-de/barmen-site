@@ -31,23 +31,9 @@
         z-index: 3;
 
         overflow: hidden;
-
-        &.mobile {
-            .presentation__video--desktop {
-                display: none;
-            }
-
-            .presentation__video--mobile {
-                display: block;
-            }
-        }
     }
 
     &__video {
         max-width: 100%;
-
-        &--mobile {
-            display: none;
-        }
     }
 }
