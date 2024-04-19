@@ -26,8 +26,9 @@
     &__icons {
         display: flex;
         gap: $grid-gap / 2;
-        
-        path {
+
+        path,
+        rect {
             fill: $text-color;
             stroke: $text-second-color;
         }

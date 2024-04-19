@@ -404,7 +404,8 @@ main > section {
   display: flex;
   gap: 15px;
 }
-.course-card__icons path {
+.course-card__icons path,
+.course-card__icons rect {
   fill: #f8f4f4;
   stroke: #141414;
 }
